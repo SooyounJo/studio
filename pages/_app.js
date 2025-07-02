@@ -35,9 +35,9 @@ export default function App({ Component, pageProps }) {
         className={`custom-cursor${isTriangle ? ' triangle' : ''}`}
         style={{ left: cursor.x, top: cursor.y }}
       />
-      <div className={`fade-${fade}`} style={{ width: '100vw', height: '100vh' }}>
-        <Component {...pageProps} />
-      </div>
+    <div className={`fade-${fade}`} style={{ width: '100vw', height: '100vh' }}>
+      <Component {...pageProps} />
+    </div>
     </>
   );
 } 

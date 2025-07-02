@@ -87,7 +87,7 @@ export default function Home() {
       </div>
       {/* COCOON */}
       <div
-        style={{ position: "absolute", top: "460px", left: "11%", width: "320px", height: "320px", zIndex: 2, cursor: "pointer", opacity: getOpacity('co'), transition: opacityTransition }}
+        style={{ position: "absolute", top: "400px", left: "2%", width: "220px", height: "220px", zIndex: 2, cursor: "pointer", opacity: getOpacity('co'), transition: opacityTransition }}
         onMouseEnter={() => { setCoHover(true); setHovered('co'); }}
         onMouseLeave={() => { setCoHover(false); setHovered(null); }}
         onClick={() => handleClick("/el")}
@@ -96,8 +96,8 @@ export default function Home() {
           src="/main/co1.png"
           alt="COCOON"
           style={{
-            width: "320px",
-            height: "320px",
+            width: "220px",
+            height: "220px",
             objectFit: "contain",
             position: "absolute",
             top: 0,
@@ -111,8 +111,8 @@ export default function Home() {
           src="/main/co2.png"
           alt="COCOON Hover"
           style={{
-            width: "320px",
-            height: "320px",
+            width: "220px",
+            height: "220px",
             objectFit: "contain",
             position: "absolute",
             top: 0,
@@ -125,7 +125,7 @@ export default function Home() {
       </div>
       {/* LUMO */}
       <div
-        style={{ position: "absolute", top: "460px", left: "44%", width: "320px", height: "320px", zIndex: 2, cursor: "pointer", opacity: getOpacity('lu'), transition: opacityTransition }}
+        style={{ position: "absolute", top: "400px", left: "35%", width: "220px", height: "220px", zIndex: 2, cursor: "pointer", opacity: getOpacity('lu'), transition: opacityTransition }}
         onMouseEnter={() => { setLuHover(true); setHovered('lu'); }}
         onMouseLeave={() => { setLuHover(false); setHovered(null); }}
         onClick={() => handleClick("/lumo")}
@@ -134,8 +134,8 @@ export default function Home() {
           src="/main/lu1.png"
           alt="LUMO"
           style={{
-            width: "320px",
-            height: "320px",
+            width: "220px",
+            height: "220px",
             objectFit: "contain",
             position: "absolute",
             top: 0,
@@ -149,8 +149,8 @@ export default function Home() {
           src="/main/lu2.png"
           alt="LUMO Hover"
           style={{
-            width: "320px",
-            height: "320px",
+            width: "220px",
+            height: "220px",
             objectFit: "contain",
             position: "absolute",
             top: 0,
@@ -163,7 +163,7 @@ export default function Home() {
       </div>
       {/* IO */}
       <div
-        style={{ position: "absolute", top: "460px", left: "77%", width: "320px", height: "320px", zIndex: 2, cursor: "pointer", opacity: getOpacity('io'), transition: opacityTransition }}
+        style={{ position: "absolute", top: "400px", left: "68%", width: "220px", height: "220px", zIndex: 2, cursor: "pointer", opacity: getOpacity('io'), transition: opacityTransition }}
         onMouseEnter={() => { setIoHover(true); setHovered('io'); }}
         onMouseLeave={() => { setIoHover(false); setHovered(null); }}
         onClick={() => handleClick("/io")}
@@ -172,8 +172,8 @@ export default function Home() {
           src="/main/io1.png"
           alt="IO"
           style={{
-            width: "320px",
-            height: "320px",
+            width: "220px",
+            height: "220px",
             objectFit: "contain",
             position: "absolute",
             top: 0,
@@ -187,8 +187,8 @@ export default function Home() {
           src="/main/io2.png"
           alt="IO Hover"
           style={{
-            width: "320px",
-            height: "320px",
+            width: "220px",
+            height: "220px",
             objectFit: "contain",
             position: "absolute",
             top: 0,
