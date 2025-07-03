@@ -87,7 +87,7 @@ export default function Home() {
       </div>
       {/* COCOON */}
       <div
-        style={{ position: "absolute", top: "250px", left: "14%", width: "260px", height: "260px", zIndex: 2, cursor: "pointer", opacity: getOpacity('co'), transition: opacityTransition, display: "flex", alignItems: "center", justifyContent: "center" }}
+        style={{ position: "absolute", top: "250px", left: "12%", width: "260px", height: "260px", zIndex: 2, cursor: "pointer", opacity: getOpacity('co'), transition: opacityTransition, display: "flex", alignItems: "center", justifyContent: "center" }}
         onMouseEnter={() => { setCoHover(true); setHovered('co'); }}
         onMouseLeave={() => { setCoHover(false); setHovered(null); }}
         onClick={() => handleClick("/el")}
@@ -120,7 +120,7 @@ export default function Home() {
       </div>
       {/* LUMO */}
       <div
-        style={{ position: "absolute", top: "250px", left: "47%", width: "260px", height: "260px", zIndex: 2, cursor: "pointer", opacity: getOpacity('lu'), transition: opacityTransition, display: "flex", alignItems: "center", justifyContent: "center" }}
+        style={{ position: "absolute", top: "250px", left: "45%", width: "260px", height: "260px", zIndex: 2, cursor: "pointer", opacity: getOpacity('lu'), transition: opacityTransition, display: "flex", alignItems: "center", justifyContent: "center" }}
         onMouseEnter={() => { setLuHover(true); setHovered('lu'); }}
         onMouseLeave={() => { setLuHover(false); setHovered(null); }}
         onClick={() => handleClick("/lumo")}
@@ -153,7 +153,7 @@ export default function Home() {
       </div>
       {/* IO */}
       <div
-        style={{ position: "absolute", top: "250px", left: "80%", width: "260px", height: "260px", zIndex: 2, cursor: "pointer", opacity: getOpacity('io'), transition: opacityTransition, display: "flex", alignItems: "center", justifyContent: "center" }}
+        style={{ position: "absolute", top: "250px", left: "78%", width: "260px", height: "260px", zIndex: 2, cursor: "pointer", opacity: getOpacity('io'), transition: opacityTransition, display: "flex", alignItems: "center", justifyContent: "center" }}
         onMouseEnter={() => { setIoHover(true); setHovered('io'); }}
         onMouseLeave={() => { setIoHover(false); setHovered(null); }}
         onClick={() => handleClick("/io")}
