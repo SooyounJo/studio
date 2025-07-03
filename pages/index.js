@@ -87,7 +87,7 @@ export default function Home() {
       </div>
       {/* COCOON */}
       <div
-        style={{ position: "absolute", top: "400px", left: "2%", width: "220px", height: "220px", zIndex: 2, cursor: "pointer", opacity: getOpacity('co'), transition: opacityTransition }}
+        style={{ position: "absolute", top: "250px", left: "14%", width: "220px", height: "220px", zIndex: 2, cursor: "pointer", opacity: getOpacity('co'), transition: opacityTransition }}
         onMouseEnter={() => { setCoHover(true); setHovered('co'); }}
         onMouseLeave={() => { setCoHover(false); setHovered(null); }}
         onClick={() => handleClick("/el")}
@@ -125,7 +125,7 @@ export default function Home() {
       </div>
       {/* LUMO */}
       <div
-        style={{ position: "absolute", top: "400px", left: "35%", width: "220px", height: "220px", zIndex: 2, cursor: "pointer", opacity: getOpacity('lu'), transition: opacityTransition }}
+        style={{ position: "absolute", top: "250px", left: "47%", width: "220px", height: "220px", zIndex: 2, cursor: "pointer", opacity: getOpacity('lu'), transition: opacityTransition }}
         onMouseEnter={() => { setLuHover(true); setHovered('lu'); }}
         onMouseLeave={() => { setLuHover(false); setHovered(null); }}
         onClick={() => handleClick("/lumo")}
@@ -163,7 +163,7 @@ export default function Home() {
       </div>
       {/* IO */}
       <div
-        style={{ position: "absolute", top: "400px", left: "68%", width: "220px", height: "220px", zIndex: 2, cursor: "pointer", opacity: getOpacity('io'), transition: opacityTransition }}
+        style={{ position: "absolute", top: "250px", left: "80%", width: "220px", height: "220px", zIndex: 2, cursor: "pointer", opacity: getOpacity('io'), transition: opacityTransition }}
         onMouseEnter={() => { setIoHover(true); setHovered('io'); }}
         onMouseLeave={() => { setIoHover(false); setHovered(null); }}
         onClick={() => handleClick("/io")}
