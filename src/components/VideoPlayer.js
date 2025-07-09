@@ -1,6 +1,6 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 
-export default function VideoPlayer({ src, style }) {
+export default function VideoPlayer({ src, style, controls }) {
   const videoRef = useRef(null);
 
   // 슬라이드 전환 시 자동 재생
@@ -20,6 +20,7 @@ export default function VideoPlayer({ src, style }) {
       loop
       playsInline
       style={style}
+      controls={controls}
     />
   );
 } 
