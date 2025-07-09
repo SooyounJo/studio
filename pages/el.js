@@ -140,21 +140,22 @@ export default function EL() {
               />
             )}
             {slide.type === "video" && (
-              <VideoPlayer
-                src="/cor2.mp4"
+              <video
+                src={slide.videoSrc}
                 style={{
-                  position: "absolute",
-                  left: "50%",
-                  top: "45%",
-                  transform: "translate(-50%, -50%)",
-                  width: "80vw",
-                  maxWidth: "1200px",
+                  width: "60vw",
+                  maxWidth: "800px",
                   height: "auto",
-                  boxShadow: "0 8px 32px rgba(0,0,0,0.25)",
                   borderRadius: "16px",
-                  zIndex: 2,
-                  pointerEvents: "none"
+                  background: "#000",
+                  display: "block",
+                  margin: "0 auto"
                 }}
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
               />
             )}
             {/* 슬라이드 간 공백 */}
