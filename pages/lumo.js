@@ -85,12 +85,13 @@ export default function Lumo() {
               <video
                 src={slide.videoSrc}
                 style={{
-                  width: "80vw",
-                  maxWidth: "1200px",
+                  width: "60vw",
+                  maxWidth: "800px",
                   height: "auto",
                   borderRadius: "16px",
                   background: "#000",
-                  zIndex: 2
+                  display: "block",
+                  margin: "0 auto"
                 }}
                 controls
                 autoPlay
