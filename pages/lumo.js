@@ -1,6 +1,8 @@
 import { useEffect, useState, useRef } from "react";
+import { useRouter } from "next/router";
 
 export default function Lumo() {
+  const router = useRouter();
   // 모든 이미지를 배열로 관리
   const slides = [
     {
@@ -48,6 +50,13 @@ export default function Lumo() {
 
   return (
     <div style={{ width: "100vw", height: "100vh", background: "#fff", overflow: "hidden", position: "relative" }}>
+      <button
+        onClick={() => router.push("/")}
+        style={{ position: "absolute", top: 32, left: 32, background: "none", border: "none", padding: 0, cursor: "pointer", zIndex: 10 }}
+        aria-label="뒤로가기"
+      >
+        <img src="/arrow-back.svg" alt="뒤로가기" style={{ width: 48, height: 48 }} />
+      </button>
       <div
         ref={containerRef}
         style={{
