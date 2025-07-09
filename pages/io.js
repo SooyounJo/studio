@@ -12,7 +12,7 @@ export default function IO() {
     },
     {
       type: "video",
-      videoSrc: "/iovi.mp4", // png → mp4로 수정
+      videoSrc: "/iomv.mp4", // png → mp4로 수정
       bgSrc: "/mv3.png"
     }
   ];
