@@ -63,7 +63,18 @@ export default function Home() {
       <img
         src="/main.png"
         alt="메인 이미지"
-        style={{ width: "100vw", height: "100vh", objectFit: "cover", display: "block", position: "absolute", top: 0, left: 0, zIndex: 1, opacity: getMainOpacity(), transition: opacityTransition }}
+        style={{
+          width: "100vw",
+          height: "100vh",
+          objectFit: "contain", // cover → contain
+          display: "block",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          zIndex: 1,
+          opacity: getMainOpacity(),
+          transition: opacityTransition
+        }}
       />
       {/* 상단 타이틀 이미지에 인터랙션 */}
       <div
