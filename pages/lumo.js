@@ -1,5 +1,3 @@
-import VideoPlayer from "../src/components/VideoPlayer";
-
 export default function Lumo() {
   return (
     <div style={{
@@ -11,7 +9,7 @@ export default function Lumo() {
       justifyContent: "center",
       position: "relative"
     }}>
-      <VideoPlayer
+      <video
         src="/lumovi.mp4"
         style={{
           width: "80vw",
@@ -22,6 +20,10 @@ export default function Lumo() {
           zIndex: 2
         }}
         controls
+        autoPlay
+        muted
+        loop
+        playsInline
       />
     </div>
   );
