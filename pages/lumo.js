@@ -143,17 +143,12 @@ export default function Lumo() {
               <VideoPlayer
                 src={slide.videoSrc}
                 style={{
-                  position: "absolute",
-                  left: "50%",
-                  top: "45%",
-                  transform: "translate(-50%, -50%)",
                   width: "80vw",
                   maxWidth: "1200px",
                   height: "auto",
-                  boxShadow: "0 8px 32px rgba(0,0,0,0.25)",
                   borderRadius: "16px",
-                  zIndex: 2,
-                  pointerEvents: "none"
+                  background: "#000",
+                  zIndex: 2
                 }}
                 controls
               />
