@@ -3,7 +3,6 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/el": "pages/el.js",
   "/io": "pages/io.js",
-  "/lumo": "pages/lumo.js"
+  "/el": "pages/el.js"
 }

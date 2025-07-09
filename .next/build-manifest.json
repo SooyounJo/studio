@@ -28,20 +28,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/el": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/el.js"
-    ],
     "/io": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/io.js"
-    ],
-    "/lumo": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/lumo.js"
     ]
   },
   "ampFirstPages": []
