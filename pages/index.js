@@ -11,6 +11,9 @@ export default function Home() {
   const [skewXY, setSkewXY] = useState({ x: 0, y: 0 });
   const router = useRouter();
   const [isClient, setIsClient] = useState(false);
+  const [gap, setGap] = useState(400); // 기본값 400px
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
@@ -65,8 +68,64 @@ export default function Home() {
     }, 500); // 페이드아웃 시간과 맞춤
   };
 
+  useEffect(() => {
+    const updateGap = () => {
+      if (typeof window !== 'undefined') {
+        setGap(Math.min(600, window.innerWidth * 0.25)); // 최대 600px, 화면 25%까지
+      }
+    };
+    updateGap();
+    window.addEventListener('resize', updateGap);
+    return () => window.removeEventListener('resize', updateGap);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (typeof window !== 'undefined') {
+        setWindowWidth(window.innerWidth);
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const checkFullscreen = () => {
+      if (typeof window !== 'undefined') {
+        setIsFullscreen(Math.abs(window.innerHeight - window.screen.height) < 10);
+      }
+    };
+    checkFullscreen();
+    window.addEventListener('resize', checkFullscreen);
+    return () => window.removeEventListener('resize', checkFullscreen);
+  }, []);
+
+  const isWide = windowWidth >= 1920;
+
+  const coLeft = isFullscreen ? "188px" : `${windowWidth * 0.17}px`;
+  const luLeft = isFullscreen ? `${windowWidth / 2 - 72}px` : `${windowWidth * 0.45}px`;
+  const ioLeft = isFullscreen ? `${windowWidth - 335}px` : `${windowWidth * 0.73}px`;
+
+  if (!isClient || windowWidth === 0) return null;
+
   return (
-    <div style={{ position: "fixed", inset: 0, width: "100vw", height: "100vh", overflow: "hidden", background: "#fff", transition: "opacity 0.5s cubic-bezier(.4,0,.2,1)", opacity: fadeOut ? 0 : 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
+    <div style={{
+      position: "fixed",
+      inset: 0,
+      width: "100vw",
+      height: "100vh",
+      overflow: "hidden",
+      background: "#fff",
+      left: 0,
+      top: 0,
+      zIndex: 0,
+      transition: "opacity 0.5s cubic-bezier(.4,0,.2,1)",
+      opacity: fadeOut ? 0 : 1,
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center"
+    }}>
       <img
         src="/main.png"
         alt="메인 이미지"
@@ -108,7 +167,7 @@ export default function Home() {
         style={{
           position: "absolute",
           top: "53%",
-          left: "17%",
+          left: coLeft,
           transform: "translateY(-50%)",
           width: "200px",
           height: "200px",
@@ -155,7 +214,7 @@ export default function Home() {
         style={{
           position: "absolute",
           top: "53%",
-          left: "45%",
+          left: luLeft,
           transform: "translateY(-50%)",
           width: "200px",
           height: "200px",
@@ -202,7 +261,7 @@ export default function Home() {
         style={{
           position: "absolute",
           top: "53%",
-          left: "73%",
+          left: ioLeft,
           transform: "translateY(-50%)",
           width: "200px",
           height: "200px",
