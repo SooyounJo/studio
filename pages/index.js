@@ -10,6 +10,11 @@ export default function Home() {
   const titleRef = useRef(null);
   const [skewXY, setSkewXY] = useState({ x: 0, y: 0 });
   const router = useRouter();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   // 마우스 따라 기울기
   useEffect(() => {
@@ -48,7 +53,9 @@ export default function Home() {
   const opacityTransition = "opacity 0.6s cubic-bezier(.4,0,.2,1)";
 
   // titleTransform에서 floatXY 제거, skew만 적용
-  const titleTransform = `translate(-50%, 0px) skewX(${skewXY.x}deg) skewY(${skewXY.y}deg) scale(1.04)`;
+  const titleTransform = isClient
+    ? `translate(-50%, 0px) skewX(${skewXY.x}deg) skewY(${skewXY.y}deg) scale(1.04)`
+    : `translate(-50%, 0px) skewX(0deg) skewY(0deg) scale(1.04)`;
 
   // 클릭 시 부드러운 페이드아웃 후 라우팅
   const handleClick = (path) => {
@@ -59,14 +66,14 @@ export default function Home() {
   };
 
   return (
-    <div style={{ position: "fixed", inset: 0, width: "100vw", height: "100vh", overflow: "hidden", background: "#fff", transition: "opacity 0.5s cubic-bezier(.4,0,.2,1)", opacity: fadeOut ? 0 : 1 }}>
+    <div style={{ position: "fixed", inset: 0, width: "100vw", height: "100vh", overflow: "hidden", background: "#fff", transition: "opacity 0.5s cubic-bezier(.4,0,.2,1)", opacity: fadeOut ? 0 : 1, display: "flex", flexDirection: "column", alignItems: "center" }}>
       <img
         src="/main.png"
         alt="메인 이미지"
         style={{
           width: "100vw",
           height: "100vh",
-          objectFit: "contain", // cover → contain
+          objectFit: "contain",
           display: "block",
           position: "absolute",
           top: 0,
@@ -98,7 +105,21 @@ export default function Home() {
       </div>
       {/* COCOON */}
       <div
-        style={{ position: "absolute", top: "300px", left: "17%", width: "200px", height: "200px", zIndex: 2, cursor: "pointer", opacity: getOpacity('co'), transition: opacityTransition, display: "flex", alignItems: "center", justifyContent: "center" }}
+        style={{
+          position: "absolute",
+          top: "53%",
+          left: "17%",
+          transform: "translateY(-50%)",
+          width: "200px",
+          height: "200px",
+          zIndex: 2,
+          cursor: "pointer",
+          opacity: getOpacity('co'),
+          transition: opacityTransition,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
         onMouseEnter={() => { setCoHover(true); setHovered('co'); }}
         onMouseLeave={() => { setCoHover(false); setHovered(null); }}
         onClick={() => handleClick("/el")}
@@ -131,7 +152,21 @@ export default function Home() {
       </div>
       {/* LUMO */}
       <div
-        style={{ position: "absolute", top: "300px", left: "45%", width: "200px", height: "200px", zIndex: 2, cursor: "pointer", opacity: getOpacity('lu'), transition: opacityTransition, display: "flex", alignItems: "center", justifyContent: "center" }}
+        style={{
+          position: "absolute",
+          top: "53%",
+          left: "45%",
+          transform: "translateY(-50%)",
+          width: "200px",
+          height: "200px",
+          zIndex: 2,
+          cursor: "pointer",
+          opacity: getOpacity('lu'),
+          transition: opacityTransition,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
         onMouseEnter={() => { setLuHover(true); setHovered('lu'); }}
         onMouseLeave={() => { setLuHover(false); setHovered(null); }}
         onClick={() => handleClick("/lumo")}
@@ -164,7 +199,21 @@ export default function Home() {
       </div>
       {/* IO */}
       <div
-        style={{ position: "absolute", top: "300px", left: "73%", width: "200px", height: "200px", zIndex: 2, cursor: "pointer", opacity: getOpacity('io'), transition: opacityTransition, display: "flex", alignItems: "center", justifyContent: "center" }}
+        style={{
+          position: "absolute",
+          top: "53%",
+          left: "73%",
+          transform: "translateY(-50%)",
+          width: "200px",
+          height: "200px",
+          zIndex: 2,
+          cursor: "pointer",
+          opacity: getOpacity('io'),
+          transition: opacityTransition,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
         onMouseEnter={() => { setIoHover(true); setHovered('io'); }}
         onMouseLeave={() => { setIoHover(false); setHovered(null); }}
         onClick={() => handleClick("/io")}
