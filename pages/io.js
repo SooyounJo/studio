@@ -8,7 +8,7 @@ export default function IO() {
   const slides = [
     {
       type: "image",
-      src: "/3.png"
+      src: "/moon.png"
     },
     {
       type: "video",
